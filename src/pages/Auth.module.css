@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: var(--bg-main);
+}
+
+/* Assuming a mobile-first or centered card layout, or maybe split screen? 
+   Kit shows "Inputs/Desktop/Tablet" so likely standard widths. */
+
+.form {
+    background-color: var(--bg-secondary);
+    /* #1F1F1F */
+    padding: 3rem 2.5rem;
+    border-radius: 30px;
+    /* Matches rounded look */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.field label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    /* #686868 */
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    /* Slight indent */
+}
+
+/* Input Container to handle icons */
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.2rem;
+    /* Right padding for eye icon */
+    border-radius: 12px;
+    /* As seen in kit */
+    border: 1px solid transparent;
+    background-color: var(--color-dark-gray);
+    /* #262626 */
+    color: var(--text-main);
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--text-muted);
+    /* Or white/brand? */
+}
+
+.inputError {
+    border-color: var(--color-error);
+}
+
+.inputSuccess {
+    border-color: var(--accent-green);
+}
+
+.iconBtn {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.errorMsg {
+    color: var(--color-error);
+    font-size: 0.75rem;
+    margin-top: 0.4rem;
+    margin-left: 0.5rem;
+}
+
+/* UI Kit "Registration" button style */
+.button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 30px;
+    /* Fully rounded pill */
+    background-color: var(--color-white);
+    color: var(--color-black);
+    /* Contrast text */
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: var(--color-gray-2);
+    /* Slight dim */
+    transform: translateY(-1px);
+}
+
+.link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.link a {
+    color: var(--text-main);
+    text-decoration: underline;
+}

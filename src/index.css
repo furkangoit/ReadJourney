@@ -1,0 +1,88 @@
+:root {
+  /* UI Kit Colors */
+  --color-white: #F9F9F9;
+  --color-gray-1: #686868;
+  --color-gray-translucent: rgba(227, 227, 227, 0.3);
+  /* #E3E3E3 30% */
+  --color-dark-gray: #262626;
+  --color-dark-bg: #1F1F1F;
+  --color-black: #141414;
+  --color-brand-blue: #4F92F7;
+  --color-brand-green: #30B94D;
+  --color-error: #D80027;
+  /* Generic error red */
+
+  /* Mappings to functional names */
+  --bg-main: var(--color-black);
+  --bg-secondary: var(--color-dark-bg);
+  --bg-card: var(--color-dark-gray);
+  --text-main: var(--color-white);
+  --text-muted: var(--color-gray-1);
+  --primary-color: var(--color-white);
+  /* Primary buttons are often white in dark themes */
+  --accent-blue: var(--color-brand-blue);
+  --accent-green: var(--color-brand-green);
+
+  --radius-lg: 30px;
+  /* Pill shape usually */
+  --radius-md: 12px;
+  /* Inputs/Cards */
+  --radius-sm: 8px;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Gilroy', 'Inter', sans-serif;
+  /* Guessing font, keeping Inter fallback */
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: underline;
+  text-decoration-color: var(--color-gray-1);
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  text-decoration-color: var(--text-main);
+  opacity: 0.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+/* Scrollbar styling for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-1);
+}
