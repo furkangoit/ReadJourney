@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Route, Routes, Link } from 'react-router-dom'
+import { Route, Routes, Link, Navigate } from 'react-router-dom'
 import { refreshUser } from './redux/auth/operations'
 import { selectIsRefreshing } from './redux/auth/selectors'
 import { RestrictedRoute } from './components/RestrictedRoute'
@@ -24,7 +24,7 @@ function App() {
     ) : (
         <div className="app-container">
             <Routes>
-                <Route path="/" element={<p>Home Page (Public) - <Link to="/login">Login</Link></p>} />
+                <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route
                     path="/register"
                     element={<RestrictedRoute redirectTo="/dashboard" component={<RegisterPage />} />}
